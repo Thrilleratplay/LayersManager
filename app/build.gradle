@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.triplet.play'
 
 android {
     compileSdkVersion 23
@@ -27,12 +26,6 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/LICENSE.txt'
         exclude 'LICENSE.txt'
-    }
-
-    play {
-        serviceAccountEmail = System.getenv("CART_EMAIL")
-        pk12File = file(System.getenv("CERT_LOCATION") == null ? 'cert.cert' : System.getenv("CERT_LOCATION"))
-        track = System.getenv("TRACK") == null ? 'alpha' : System.getenv("TRACK")
     }
 
     signingConfigs {
@@ -71,7 +64,7 @@ dependencies {
     compile 'com.android.support:palette-v7:23.2.1'
     compile 'commons-io:commons-io:2.4'
     compile 'org.apache.commons:commons-lang3:3.4'
-    compile ('com.github.rubengees:introduction:1.1.3@aar'){
+    compile ('com.github.rubengees:introduction:1.3.1@aar'){
         transitive = true;
     }
     compile('com.mikepenz:aboutlibraries:5.6.3@aar') {
