@@ -6,7 +6,7 @@
         android:title="@string/settings_general">
 
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="switch1"
             android:summary="@string/settings_hidelauncher_summary_supported"
             android:title="@string/settings_hidelauncher_title" />
